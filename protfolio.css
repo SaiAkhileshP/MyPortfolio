@@ -1,0 +1,550 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+:root{
+    --color:aqua
+}
+*{
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Montserrat', cursive;
+    background-color:black;
+    color: white;
+
+}
+#particles-js {
+    margin-top: 100px;
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    z-index: 9;
+}
+/* ----------------------------------------------------proBar----------------------- */
+.proBar{
+    height: 5px;
+    background-color: aqua;
+    border:2px solid white;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    animation: adjust-progress forwards;
+    animation-timeline: scroll();
+    animation-duration: auto;
+}
+/* ------------------------------------------------------------------------------------ */
+/* -------------------------------------------Nav Bar--------------------------- */
+nav{
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 10px aqua;
+    background-color: rgba(0,0,0,.5);
+    
+}
+.heading{
+    color: var(--color);
+}
+.name{
+    font-size: x-large;
+    margin-left: 3%;
+    padding-top: 20px;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    padding-top: 20px;
+}
+li{
+    list-style-type: none;
+
+}
+ul li{
+    margin-right: 30px;
+    font-weight: bold;
+}
+ul li a{
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+ul li a:hover{
+    transition: ease .3s;
+    color:aqua;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* ----------------------------------------------------------------------------------- */
+/* ---------------------------------Home---------------------------------- */
+.body{
+    display: flex;
+    padding-top: 15%;
+    
+    
+}
+.icons{
+    margin-left: 20px;
+}
+.icons a{
+    padding: 5px;
+    font-size: 25px;
+    color:  var(--color);
+    /* border: 1px solid rgb(6, 6, 160); */
+    border-radius: 50%;
+    
+}
+.icons a:hover{
+    color: black;
+    background-color:aqua;
+    border-radius: 50%;
+}
+.icons li{
+    margin-top: 20px;
+}
+.text{
+    margin-left: 10%;
+    font-size:25px;
+
+}
+
+span{
+    color:var(--color);
+}
+.body .pic{
+    position: relative;
+    margin-left:25%;
+    
+}
+.download{
+    font-size:small;
+    padding: 15px 15px;
+    border: 2px solid var(--color);
+    border-radius: 15px;
+    font-weight: bold;
+}
+.download:hover{
+    background-color: var(--color);
+    color: black;
+    transition: ease .5s;
+    
+}
+.body .pic p{
+    position: absolute;
+    border-radius: 30% 70% 67% 33% / 30% 30% 70% 70% ;
+    background-color:var(--color);
+     height: 250px;
+    width: 300px;
+     z-index: 0;
+}
+.body .pic img{
+    position: absolute;
+    top: -25px;
+    height:250px;
+     width:290px;
+     z-index: 1;
+     filter: drop-shadow(0px 5px 10px black);
+}
+/* ------------------------------------About----------------------------- */
+.about{
+    background-color: transparent;
+}
+.container{
+    padding: 10% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+}
+.image{
+    margin-right: 20%;
+}
+
+.container img{
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px aqua;
+}
+.aboutImage{
+    height:250px;
+    width:290px;
+}
+.aboutme p{
+    font-size:20px;
+    animation: faide linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
+    background-clip: text;
+}
+.aboutme>h1{
+    width: fit-content;
+    position: relative;
+}
+.aboutme >h1::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position:absolute;
+    bottom: -5px;
+    left: 0;
+    transition: ease-in-out .2s;
+    transform: scaleX(0);
+}
+.about:hover .aboutme>h1::after{
+    transform: scaleX(1);
+}
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------Skills------------------------------- */
+.skills{
+    height: 100vh;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.skillHeading::first-letter{
+    color: var(--color);
+    font-size: 40px;
+}
+.skillContainer{
+    width: 75%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+    
+    
+}
+.skill{
+    height: 100px;
+    width: 300px;
+    border: 1px solid var(--color);
+    margin: 10px;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slide linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
+
+
+}
+.skill::before{
+    content: "";
+    background-color: aqua;
+    height: 100%;
+    width: 0;
+    left: 0;
+    position: absolute;
+    transition: ease-in-out .2s;
+    z-index: -1;
+
+}
+.skill:hover::before{
+    width: 100%;
+}
+.skill:hover{
+     color: black;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* -------------------------------------projects--------------------------------------- */
+.projects{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.projectsHeading::first-letter{
+    color: var(--color);
+    font-size: 40px;
+}
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.projectBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.project{
+    padding: 20px;
+    height: 300px;
+    width: 200px;
+    border: 1px solid aqua;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    animation: scale both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 23%;
+   
+}
+.projectLayer{
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden; /*for hiding the button */
+    background: rgb(9,9,9);
+   background: linear-gradient(180deg, rgba(9,9,9,0) 3%, rgba(0,255,255,1) 100%);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: height 0.5s;
+   
+}
+.project:hover .projectLayer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.projectBtn{
+    padding:5px 10px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: aqua;
+    margin-top: 45%;
+
+}
+/* ------------------------------------------------------------------------------------ */
+
+/* -----------------------------------------Contact Form--------------------------------- */
+.contactForm{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactus::first-letter{
+    color: var(--color);
+    font-size: 40px;
+}
+.field{
+    margin-bottom: 10%;
+}
+label{
+    color: white;
+    font-size: 20px;
+}
+input,textarea{
+    padding: 10px;
+    width: 90%;
+    border:1px solid aqua;
+    border-radius: 5px;
+    background-color:rgba(0, 0, 0, 0.552);
+    outline: none;
+    color: white;
+    margin-top: 10px;
+}
+input:focus , textarea:focus{
+    box-shadow:1px 1px 10px aqua;
+}
+.subBtn{
+    padding: 10px;
+    width: 90%;
+    border:1px solid aqua;
+    border-radius: 5px;
+    background-color:aqua;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+.subBtn:hover{
+    box-shadow:1px 1px 10px aqua;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+
+/* ----------------------------------Footer------------------------------------------- */
+.footer{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid aqua;
+    background-color: black;
+    /* left: 0; */
+    z-index: 100000;
+    padding: 10px 0px;
+    
+}
+.footIcons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer i{
+    font-size: 20px;
+    color: aqua;
+
+}
+/* ------------------------------------------------------------------------------ */
+/* ----------------------------------------Animations-------------------------------- */
+
+@keyframes faide {
+    from{
+        opacity: 0;
+       transform: scaleY(0);
+    }
+    to{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes slide {
+    from{
+        opacity: 0;
+       transform: translateX(-10%);
+    }
+    to{
+        opacity: 1;
+       transform: translateX(10%);
+    }
+}
+@keyframes scale {
+    from{
+        opacity: 0;
+       transform: scaleX(0);
+    }
+    to{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes adjust-progress {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+/* ------------------------------------------------------------------------------------- */
+@media screen and ( max-width:800px) {
+    body{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .footer{
+    display: block;
+    height: 30px;
+    width: 100%;
+    }
+   nav{
+    display: none;
+   }
+   .icons{
+    display: flex;
+   }
+   .icons a{
+    font-size: 25px;
+    margin-right: 20px;
+   }
+   .text{
+    font-size: 18px;
+   
+   }
+   .text p{
+    margin-bottom: 20%;
+   }
+   .download{
+    margin-top: 20%;
+    font-size: 15px;
+   }
+   .body{
+    display: block;
+    height: 100vh;
+    width: 100%;
+   }
+   .body .pic{
+    margin-left: 15%;
+   }
+   .body .pic p{
+    top: 35px;
+    height:190px;
+    width: 190px;
+   }
+   .body .pic img{
+    top: 35px;
+    height:180px;
+    width: 190px;
+   }
+   .about{
+    height: fit-content;
+    width: 100%;
+   }
+   .container{
+    display: block;
+    font-size: 18px;
+    
+   }
+   .aboutImage{
+    display: none;
+   }
+
+   .aboutme p{
+    font-size: 18px;
+   }
+   .skillContainer{
+    padding: 10px;
+    width:100%;
+    height: 100vh;
+    margin: 0px;
+   }
+   .skills{
+    height: 100vh;
+    width: 100%;
+   }
+   .skill{
+    width: 150px;
+    height: 80px;
+   }
+   .projects{
+    height: 100vh;
+    width: 100%;
+   }
+   .project{
+    height: 200px;
+    width: 110px;
+   }
+   .contactForm{
+    height: 100vh;
+    width: 100%;
+   }
+   form{
+    margin-bottom: 20%;
+   }
+
+}
