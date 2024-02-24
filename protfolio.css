@@ -152,20 +152,42 @@ span{
      filter: drop-shadow(0px 5px 10px black);
 }
 /* ------------------------------------About----------------------------- */
-
+.about{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.row{
+    border-left: 2px solid aqua;
+}
+.row .box{
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.row{
+    margin: 0px 10px;
+}
+.box .date{
+    color: aqua;
+}
 .container{
     min-height: 100vh;
     max-height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 60vw;
 }
 .aboutme{
     width: 90%;
     
 }
 .aboutme p{
-    font-size:25px;
+    font-size:20px;
     animation: faide linear both;
     
 }
@@ -196,12 +218,14 @@ span{
    display: flex;
    flex-direction: column;
    align-items: center;
-    justify-content: center;
+   justify-content: center;
 }
 .skillContainer{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .skillHeading::first-letter{
     color: var(--color);
@@ -209,37 +233,20 @@ span{
 }
 
 .skill{
-    height: 100px;
-    width: 300px;
-    border: 1px solid var(--color);
-    margin: 10px;
-    /* position: relative; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: slide linear both;
-    
-
-
-}
-.skill::before{
-    content: "";
-    background-color: aqua;
-    height: 100%;
-    width: 0;
-    left: 0;
-    position: absolute;
-    transition: ease-in-out .2s;
-    z-index: -1;
-
-}
-.skill:hover::before{
-    width: 100%;
+ border:1px solid rgba(0, 255, 255,.6);
+ margin: 10px;
+ padding: 10px;
+ min-width: 10vw;
+ max-width: fit-content;
+text-align: center;
+border-radius: 5px;
+flex-grow: 1;
 }
 .skill:hover{
-     color: black;
+    border: 1px solid white;
+    color: aqua;
+    box-shadow: 2px 2px 5px aqua;
 }
-
 /* ------------------------------------------------------------------------------------- */
 /* -------------------------------------projects--------------------------------------- */
 .projects{
@@ -276,10 +283,6 @@ span{
     justify-content: center;
     align-items: center;
     position: relative;
-
-    animation: scale both;
-    animation-timeline: view();
-    animation-range: cover 0% cover 23%;
    
 }
 .projectLayer{
@@ -433,6 +436,7 @@ input:focus , textarea:focus{
     }
 }
 /* ------------------------------------------------------------------------------------- */
+/* --------------------------------------------Responsive-------------------------------- */
 @media screen and ( max-width:800px) {
     body{
         width: 100%;
@@ -486,24 +490,23 @@ input:focus , textarea:focus{
    }
    .about{
     height: fit-content;
-    width: 100%;
+    display: block;
+    width:100%;
+   }
+   .box{
+    max-width: 500px;
    }
    .container{
     display: flex;
     font-size: 18px;
+    width: 100%;
    }
    .aboutme p{
     font-size: 18px;
    }
-   .skillContainer{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-   }
-   .skill{
-    font-size: 13px;
-    width: 40%;
-   }
+.skill{
+    font-size: 12px;
+}
    .project{
     height: 200px;
     width: 110px;
