@@ -125,14 +125,17 @@ span{
 .download{
     font-size:small;
     padding: 15px 15px;
-    border: 2px solid var(--color);
+    border: 2px solid white;
     border-radius: 15px;
     font-weight: bold;
+    border-top: 5px solid aqua;
 }
 .download:hover{
     background-color: var(--color);
     color: black;
     transition: ease .5s;
+    border:2px solid black;
+    
     
 }
 .body .pic p{
@@ -162,6 +165,7 @@ span{
 }
 .row .box{
     border: 1px solid whitesmoke;
+    border-top: 5px solid aqua;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -225,15 +229,22 @@ span{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
 }
 .skillHeading::first-letter{
     color: var(--color);
     font-size: 40px;
 }
+.skillLogo{
+    height: 15vh;
+    width: 15vw;
 
-.skill{
- border:1px solid rgba(0, 255, 255,.6);
+}
+/* .skill{
+ 
+border-top: 10px solid aqua;
+ color: black;
  margin: 10px;
  padding: 10px;
  min-width: 10vw;
@@ -241,12 +252,18 @@ span{
 text-align: center;
 border-radius: 5px;
 flex-grow: 1;
+background: rgb(214,247,247);
+background: linear-gradient(149deg, rgba(214,247,247,1) 60%, rgba(83,254,254,1) 100%);
+transition-timing-function:ease-in;
 }
 .skill:hover{
-    border: 1px solid white;
-    color: aqua;
-    box-shadow: 2px 2px 5px aqua;
-}
+
+border-top: 0;
+   border-radius:0px;
+} */
+
+
+
 /* ------------------------------------------------------------------------------------- */
 /* -------------------------------------projects--------------------------------------- */
 .projects{
@@ -277,6 +294,7 @@ flex-grow: 1;
     height: 300px;
     width: 200px;
     border: 1px solid aqua;
+    border-top: 10px solid aqua;
     border-radius: 5px;
     margin: 10px;
     display: flex;
